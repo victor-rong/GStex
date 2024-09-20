@@ -7,7 +7,7 @@ If you find this code useful for your research, please consider citing:
 ```
 @article{rong2024gstex,
     title={GStex: Per-primitive texturing of 2D gaussian splatting for decoupled appearance and geometry modeling},
-    author={Rong, Victor and Chen, Jianxiang and Bahmani, Sherwin and Kutulakos, Kiriakos N and Lindell, David B},
+    author={Rong, Victor and Chen, Jingxiang and Bahmani, Sherwin and Kutulakos, Kiriakos N and Lindell, David B},
     journal={arXiv preprint arXiv:2409.12954},
     year={2024}
 }
