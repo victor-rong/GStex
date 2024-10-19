@@ -1,0 +1,3 @@
+[submodule "submodules/GStex_cuda"]
+	path = submodules/GStex_cuda
+	url = git@github.com:victor-rong/GStex_cuda.git
