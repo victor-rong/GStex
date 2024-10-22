@@ -1,6 +1,6 @@
 # GStex: Per-Primitive Texturing of 2D Gaussian Splatting for Decoupled Appearance and Geometry Modeling
 
-[Project page](https://lessvrong.com/cs/gstex) | [Paper](https://arxiv.org/pdf/2409.12954) | [CUDA Rasterizer](https://github.com/victor-rong/GStex_cuda) | [Point Cloud Data (0.8GB)](https://www.dropbox.com/scl/fi/fq7ui31bjrjrhcywlqtds/pcd_data.zip?rlkey=hgw61d4jk089pio6agwq758mo&st=rg915i5r&dl=0) | [Full Data (6.0GB)](https://www.dropbox.com/scl/fi/2bl593hdr1qde13yrlxmj/full_data.zip?rlkey=10n1387zp1ma7hy4dryygy4el&e=1&st=3hhghjkb&dl=0) <br>
+[Project Page](https://lessvrong.com/cs/gstex) | [Paper](https://arxiv.org/pdf/2409.12954) | [CUDA Rasterizer](https://github.com/victor-rong/GStex_cuda) | [Point Cloud Data (0.8GB)](https://www.dropbox.com/scl/fi/fq7ui31bjrjrhcywlqtds/pcd_data.zip?rlkey=hgw61d4jk089pio6agwq758mo&st=rg915i5r&dl=0) | [Full Data (6.0GB)](https://www.dropbox.com/scl/fi/2bl593hdr1qde13yrlxmj/full_data.zip?rlkey=10n1387zp1ma7hy4dryygy4el&e=1&st=3hhghjkb&dl=0) <br>
 
 <img src="./assets/teaser.png" alt="Teaser figure" width="100%"/>
 
