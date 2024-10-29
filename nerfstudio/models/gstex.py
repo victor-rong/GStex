@@ -711,6 +711,20 @@ class GStexModel(Model):
         )[:num_points,:]
         return points, colors
 
+    def get_average_colors(self):
+        idxs = torch.arange(self.texture_dims.shape[0], dtype=torch.int64, device=self.texture_dims.device)
+        hws = self.texture_dims[:,0] * self.texture_dims[:,1]
+        ids = torch.repeat_interleave(idxs, hws, dim=0)
+        texture_dc = self.texture_dc.get_texture()
+        if self.config.sh_degree > 0:
+            texture_dc = SH2RGB(texture_dc)
+        else:
+            texture_dc = torch.sigmoid(texture_dc)
+        denom = hws.float()
+        avg_dc = torch.zeros((denom.shape[0], texture_dc.shape[-1],), device=hws.device, dtype=torch.float32)
+        avg_dc = torch.index_add(avg_dc, 0, ids, texture_dc) / denom[:,None]
+        return avg_dc
+
     @property
     def colors(self):
         if self.config.sh_degree > 0:

@@ -1,6 +1,6 @@
 # GStex: Per-Primitive Texturing of 2D Gaussian Splatting for Decoupled Appearance and Geometry Modeling
 
-[Project Page](https://lessvrong.com/cs/gstex) | [Paper](https://arxiv.org/pdf/2409.12954) | [CUDA Rasterizer](https://github.com/victor-rong/GStex_cuda) | [Point Cloud Data (0.8GB)](https://www.dropbox.com/scl/fi/fq7ui31bjrjrhcywlqtds/pcd_data.zip?rlkey=hgw61d4jk089pio6agwq758mo&st=rg915i5r&dl=0) | [Full Data (6.0GB)](https://www.dropbox.com/scl/fi/2bl593hdr1qde13yrlxmj/full_data.zip?rlkey=10n1387zp1ma7hy4dryygy4el&e=1&st=3hhghjkb&dl=0) <br>
+[Project Page](https://lessvrong.com/cs/gstex) | [Paper](https://arxiv.org/pdf/2409.12954) | [CUDA Rasterizer](https://github.com/victor-rong/GStex_cuda) | [Point Cloud Data (0.8GB)](https://www.dropbox.com/scl/fi/fklfyrd05xx8cnpqi54u4/pcd_data.zip?rlkey=hyo9v69hv7q4y5hw0jvrvcwuc&st=7vfcrejv&dl=0) | [Full Data (6.0GB)](https://www.dropbox.com/scl/fi/9xukw24sn4guyd6s8ddoi/full_data.zip?rlkey=6xk6tu9eluz25swauq0aoprun&st=7h8wbk8e&dl=0) <br>
 
 <img src="./assets/teaser.png" alt="Teaser figure" width="100%"/>
 
@@ -8,7 +8,7 @@ This is the official repository for "GStex: Per-Primitive Texturing of 2D Gaussi
 
 ## Errata
 
-A bug was found that affected our metrics evaluation for 2DGS and GStex. The corrected PSNRs for novel view synthesis are below, and the preprint will be updated with all the corrected numbers shortly.
+A bug was found that affected our metrics evaluation for 2DGS and GStex. The corrected PSNRs for novel view synthesis are below, and the preprint has been updated with all the corrected numbers.
 
 |    | Blender | DTU |
 |----|----|----|
@@ -54,11 +54,11 @@ First, be sure to download our Blender and DTU data from the link above or by us
 
 ```
 # full dataset
-wget -O data.zip "https://www.dropbox.com/scl/fi/2bl593hdr1qde13yrlxmj/full_data.zip?rlkey=10n1387zp1ma7hy4dryygy4el&e=1&st=3hhghjkb&dl=1"
+wget -O data.zip "https://www.dropbox.com/scl/fi/9xukw24sn4guyd6s8ddoi/full_data.zip?rlkey=6xk6tu9eluz25swauq0aoprun&st=7h8wbk8e&dl=1"
 unzip data.zip
 
 # just the point clouds
-wget -O pcd_data.zip "https://www.dropbox.com/scl/fi/fq7ui31bjrjrhcywlqtds/pcd_data.zip?rlkey=hgw61d4jk089pio6agwq758mo&st=rg915i5r&dl=1"
+wget -O pcd_data.zip "https://www.dropbox.com/scl/fi/fklfyrd05xx8cnpqi54u4/pcd_data.zip?rlkey=hyo9v69hv7q4y5hw0jvrvcwuc&st=7vfcrejv&dl=1"
 unzip pcd_data.zip
 ```
 
@@ -88,12 +88,12 @@ Nerfstudio provides a customizable viewer which can be accessed through the brow
 ```
 # example for Blender scenes
 ns-train gstex-blender-init \
-  --pipeline.model.init-ply ./pcd_data/blender/chair/init_nvs/point_cloud.ply \
+  --pipeline.model.init-ply ./data/blender/chair/init_nvs/point_cloud.ply \
   blender-data --data ./data/blender/chair
 
 # example for COLMAP scenes
 ns-train gstex-colmap-init \
-  --pipeline.model.init-ply ./pcd_data/dtu/scan24/init_nvs/point_cloud.ply \
+  --pipeline.model.init-ply ./data/dtu/scan24/init_nvs/point_cloud.ply \
   --data ./data/dtu/scan24
 ```
 
