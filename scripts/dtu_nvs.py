@@ -29,7 +29,7 @@ def run_dtu(runner, args):
         run_dtu_experiment(runner, exp_name, inst_name, data_name, args.data_dir, args.point_cloud_dir)
 
 if __name__ == "__main__":
-    # python scripts/dtu_nvs.py --data_dir ./data/dtu --data_dir ./pcd_data/dtu --start 0 --end 15
+    # python scripts/dtu_nvs.py --data_dir ./data/dtu --point_cloud_dir ./pcd_data/dtu --start 0 --end 15
     parser = argparse.ArgumentParser()
     parser.add_argument("--start", default=0, type=int)
     parser.add_argument("--end", default=15, type=int)

@@ -1,6 +1,6 @@
 # GStex: Per-Primitive Texturing of 2D Gaussian Splatting for Decoupled Appearance and Geometry Modeling
 
-[Project Page](https://lessvrong.com/cs/gstex) | [Paper](https://arxiv.org/pdf/2409.12954) | [CUDA Rasterizer](https://github.com/victor-rong/GStex_cuda) | [Point Cloud Data (0.8GB)](https://www.dropbox.com/scl/fi/fklfyrd05xx8cnpqi54u4/pcd_data.zip?rlkey=hyo9v69hv7q4y5hw0jvrvcwuc&st=7vfcrejv&dl=0) | [Full Data (6.0GB)](https://www.dropbox.com/scl/fi/9xukw24sn4guyd6s8ddoi/full_data.zip?rlkey=6xk6tu9eluz25swauq0aoprun&st=7h8wbk8e&dl=0) <br>
+[Project Page](https://lessvrong.com/cs/gstex) | [Paper](https://arxiv.org/pdf/2409.12954) | [CUDA Rasterizer](https://github.com/victor-rong/GStex_cuda) | [Point Cloud Data (0.8GB)](https://www.dropbox.com/scl/fi/fklfyrd05xx8cnpqi54u4/pcd_data.zip?rlkey=hyo9v69hv7q4y5hw0jvrvcwuc&st=7vfcrejv&dl=0) | [Full Data (6.0GB)](https://www.dropbox.com/scl/fi/9xukw24sn4guyd6s8ddoi/full_data.zip?rlkey=6xk6tu9eluz25swauq0aoprun&st=9d0q4284&dl=0) <br>
 
 <img src="./assets/teaser.png" alt="Teaser figure" width="100%"/>
 
@@ -54,7 +54,7 @@ First, be sure to download our Blender and DTU data from the link above or by us
 
 ```
 # full dataset
-wget -O data.zip "https://www.dropbox.com/scl/fi/9xukw24sn4guyd6s8ddoi/full_data.zip?rlkey=6xk6tu9eluz25swauq0aoprun&st=7h8wbk8e&dl=1"
+wget -O data.zip "https://www.dropbox.com/scl/fi/9xukw24sn4guyd6s8ddoi/full_data.zip?rlkey=6xk6tu9eluz25swauq0aoprun&st=9d0q4284&dl=1"
 unzip data.zip
 
 # just the point clouds
@@ -66,7 +66,7 @@ Then Table 1 of our paper can be reproduced using the scripts provided in `./scr
 
 ```
 python scripts/blender_nvs.py --data_dir ./data/blender --point_cloud_dir ./data/blender --start 0 --end 8
-python scripts/dtu_nvs.py --data_dir ./data/dtu --data_dir ./data/dtu --start 0 --end 15
+python scripts/dtu_nvs.py --data_dir ./data/dtu --point_cloud_dir ./data/dtu --start 0 --end 15
 ```
 
 You can also use your own custom data. As culling and densification is disabled in this pipeline, random initialization (e.g. points sampled from a cube for the Blender scenes) will have limited results. An initialization from COLMAP works, and we also support initializing from [2DGS](https://github.com/hbb1/2d-gaussian-splatting). For example, if your 2DGS output folder is `~/2d-gaussian-splatting/output/123`, then your script would be
